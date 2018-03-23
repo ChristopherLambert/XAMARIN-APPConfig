@@ -9,6 +9,7 @@ Git PCLAppConfig: https://github.com/mrbrl/PCLAppConfig
 
 Passo a passo:
 1º Adicione o plugin PCLAppConfig via Nuget
+
 2º Adicione um arquivo de configuração(App.config) com as variaveis que deseja ali guardar
 
 <configuration> 
