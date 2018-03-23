@@ -12,17 +12,24 @@ Passo a passo:
 
 2º Adicione um arquivo de configuração(App.config) com as variaveis que deseja ali guardar
 
-<configuration> 
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
   <appSettings> 
     <add key="config.text" value="hello from app.settings!" /> 
   </appSettings> 
 </configuration>
+```
 
 3º Inicialize o plugin no App.xaml.cs 
 
+```c#
   Assembly assembly = typeof(App).GetTypeInfo().Assembly;
 	ConfigurationManager.Initialise(assembly.GetManifestResourceStream("XamarinConfig.App.config"));
-  
+ ```
+
 4º Busque pelas suas chaves seus respctivos valores (Access your setting)
    
+   ```c#
    ConfigurationManager.AppSettings["config.text"];
+   ```
